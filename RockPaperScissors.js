@@ -1,8 +1,8 @@
 function game () {
 const  rockPaperScissors = ["rock", "paper", "scissors"];
 
-var playerScore = 0;
-var computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 function computerPlay (){
 
@@ -16,7 +16,7 @@ function playRound(playerSelection, computerSelection) {
           // your code here!
 
 
-  if (playerSelection == 'rock' && computerSelection == 'scissors'){
+  if (playerSelection === 'rock' && computerSelection === 'scissors'){
       playerScore++;
       return `You Win! Rock beats Scissors. Score: ${playerScore} to ${computerScore}`;
   }
@@ -40,15 +40,15 @@ function playRound(playerSelection, computerSelection) {
       computerScore++;  
       return `Scissors beats paper, You lose! Score: ${playerScore} to ${computerScore}`;
   }
-  else if (playerSelection != "rock" || playerSelection != "paper" || playerSelection != "scissors") {
-    return "This is not a valid entry. Try again.";
-  }
+  //else if (playerSelection != "rock" || playerSelection != "paper" || playerSelection != "scissors") {
+    //return "This is not a valid entry. Try again.";
+  //}
   else return `Try again, draw! Score: ${playerScore} to ${computerScore}`;
 
 }
 
 
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < 5; i++) {
     const pickYourChoice = prompt("Do you choose Rock, Paper or Scissors?").toLowerCase();
     playerSelection = pickYourChoice.toLowerCase();
     const computerSelection = computerPlay()
